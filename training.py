@@ -45,6 +45,7 @@ def train(params, model, optimizer, epoch, train_loader, writer=None):
                                  f'ERate:{exp_right / cal_num:.4f}')
             if batch_idx >= len(train_loader) // params['train_parts']:
                 break
+            torch.cuda.empty_cache()
 
         if writer:
             writer.add_scalar('epoch/train_loss', loss_meter.mean, epoch+1)
@@ -86,6 +87,7 @@ def eval(params, model, epoch, eval_loader, writer=None):
                                  f'ERate:{exp_right / cal_num:.4f}')
             if batch_idx >= len(eval_loader) // params['valid_parts']:
                 break
+            torch.cuda.empty_cache()
 
         if writer:
             writer.add_scalar('epoch/eval_loss', loss_meter.mean, epoch + 1)

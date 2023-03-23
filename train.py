@@ -78,3 +78,5 @@ if args.dataset == 'CROHME':
                 min_score = eval_exprate
                 save_checkpoint(model, optimizer, eval_word_score, eval_exprate, epoch+1,
                                 optimizer_save=params['optimizer_save'], path=params['checkpoint_dir'])
+
+        torch.cuda.empty_cache()

@@ -1,8 +1,8 @@
 # When Counting Meets HMER: Counting-Aware Network for Handwritten Mathematical Expression Recognition
 
-This is the official pytorch implementation of [CAN](https://arxiv.org/abs/2207.11463) (ECCV'2022). 
+This is the official pytorch implementation of [CAN](https://arxiv.org/abs/2207.11463) (ECCV'2022).
 
->*Bohan Li, Ye Yuan, Dingkang Liang, Xiao Liu, Zhilong Ji, Jinfeng Bai, Wenyu Liu, Xiang Bai*
+> *Bohan Li, Ye Yuan, Dingkang Liang, Xiao Liu, Zhilong Ji, Jinfeng Bai, Wenyu Liu, Xiang Bai*
 
 ## Abstract
 
@@ -20,29 +20,25 @@ Recently, most handwritten mathematical expression recognition (HMER) methods ad
 
 ## Datasets
 
-Download the CROHME dataset from [BaiduYun](https://pan.baidu.com/s/1qUVQLZh5aPT6d7-m6il6Rg) (downloading code: 1234) and put it in ```datasets/```.
+Download the CROHME dataset from [BaiduYun](https://pan.baidu.com/s/1qUVQLZh5aPT6d7-m6il6Rg) (downloading code: 1234) and put it in ``datasets/``.
 
 The HME100K dataset can be download from the official website [HME100K](https://ai.100tal.com/dataset).
 
 ## Training
 
-Check the config file ```config.yaml``` and train with the CROHME dataset:
+Check the config file ``config.yaml`` and train with the CROHME dataset:python train.py --dataset CROHME
 
-```
-python train.py --dataset CROHME
-```
-
-By default the ```batch size``` is set to 8 and you may need to use a GPU with 32GB RAM to train your model. 
+By default the ``batch size`` is set to 8 and you may need to use a GPU with 32GB RAM to train your model.
 
 ## Testing
 
-Fill in the ```checkpoint``` (pretrained model path) in the config file ```config.yaml``` and test with the CROHME dataset:
+Fill in the ``checkpoint`` (pretrained model path) in the config file ``config.yaml`` and test with the CROHME dataset:
 
 ```
 python inference.py --dataset CROHME
 ```
 
-Note that the testing dataset path is set in the ```inference.py```.
+Note that the testing dataset path is set in the ``inference.py``.
 
 ## Citation
 
@@ -66,5 +62,3 @@ Some other excellent open-sourced HMER algorithms can be found here:
 [ABM](https://github.com/XH-B/ABM)[AAAI'2022]
 [SAN](https://github.com/tal-tech/SAN)[CVPR'2022]
 [CoMER](https://github.com/Green-Wood/CoMER)[ECCV'2022]
-
-
